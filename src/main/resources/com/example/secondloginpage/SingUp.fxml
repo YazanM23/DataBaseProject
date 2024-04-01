@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.secondloginpage.SingController">
+    <left>
+        <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #101552;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="162.0" fitWidth="178.0" layoutX="88.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@1040346_351053815021266_1574038359_o-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="9.0" layoutY="16.0" prefHeight="51.0" prefWidth="338.0" style="-fx-font-weight: bold; -fx-font-size: 35; -fx-alignment: center;" text="Register" textFill="#101552">
+                    <font>
+                        <Font size="35.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tFName" layoutX="108.0" layoutY="205.0" style="-fx-background-color: transperant; -fx-border-color: #101552;" />
+                <PasswordField fx:id="tPassword" layoutX="108.0" layoutY="304.0" style="-fx-background-color: transperant; -fx-border-color: #101552;" />
+                <Label layoutX="32.0" layoutY="207.0" prefHeight="23.0" prefWidth="66.0" style="-fx-font-weight: bold;" text="First Name" textFill="#101552" />
+                <Label layoutX="32.0" layoutY="256.0" prefHeight="22.0" prefWidth="69.0" style="-fx-font-weight: bold;" text="Last Name" textFill="#101552" />
+                <Button layoutX="140.0" layoutY="459.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="34.0" prefWidth="90.0" style="-fx-font-weight: bold; -fx-label-padding: 2 10; -fx-background-radius: 30; -fx-background-color: #101552;" text="Sign Up" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <TextField fx:id="tLName" layoutX="108.0" layoutY="254.0" style="-fx-background-color: transperant; -fx-border-color: #101552;" />
+                <TextField fx:id="tSSN" layoutX="108.0" layoutY="159.0" style="-fx-background-color: transperant; -fx-border-color: #101552;" />
+                <Label layoutX="51.0" layoutY="163.0" prefHeight="18.0" prefWidth="27.0" style="-fx-font-weight: bold;" text="SSN" textFill="#101552" />
+                <Label layoutX="56.0" layoutY="356.0" prefHeight="20.0" prefWidth="29.0" style="-fx-font-weight: bold;" text="Age" textFill="#101552" />
+                <Label layoutX="35.0" layoutY="308.0" prefHeight="16.0" prefWidth="61.0" style="-fx-font-weight: bold;" text="Password" textFill="#101552" />
+                <Label layoutX="56.0" layoutY="401.0" prefHeight="19.0" prefWidth="31.0" style="-fx-font-weight: bold;" text="Type" textFill="#101552" />
+                <TextField fx:id="tAge" layoutX="108.0" layoutY="353.0" style="-fx-background-color: transperant; -fx-border-color: #101552;" />
+                <ChoiceBox fx:id="choicebox" layoutX="108.0" layoutY="398.0" prefWidth="161.5" style="-fx-background-color: transperant; -fx-border-color: #101552;" />
+            <Hyperlink layoutX="116.0" layoutY="533.0" onAction="#SingOut" text="already have account?" textFill="#101152" />
+            <TextField fx:id="tUser" layoutX="108.0" layoutY="116.0" style="-fx-background-color: transperant; -fx-border-color: #101552;" />
+            <Label layoutX="35.0" layoutY="120.0" prefHeight="18.0" prefWidth="62.0" style="-fx-font-weight: bold;" text="User Name" textFill="#101552" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

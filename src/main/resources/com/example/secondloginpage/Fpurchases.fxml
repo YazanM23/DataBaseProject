@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.secondloginpage.purchasesController">
+    <children>
+        <TableView fx:id="purTable" layoutX="4.0" layoutY="86.0" prefHeight="515.0" prefWidth="1151.0" styleClass="column-header-background" stylesheets="@tablecss.css" translateX="212.0" translateY="-90.0">
+            <columns>
+                <TableColumn fx:id="NameColumn" prefWidth="362.7254180908203" sortable="false" text="Name" />
+                <TableColumn fx:id="TypeColumn" prefWidth="294.2745056152344" sortable="false" text="Type" />
+                <TableColumn fx:id="QuantityColumn" prefWidth="153.530029296875" sortable="false" text="Quantity" />
+                <TableColumn fx:id="AmountColumn" minWidth="7.0" prefWidth="148.969970703125" sortable="false" text="Amount" />
+                <TableColumn fx:id="DateColumn" prefWidth="196.5250244140625" sortable="false" text="Date" />
+            </columns>
+        </TableView>
+        <AnchorPane fx:id="purSlide" layoutX="-2.0" layoutY="-1.0" prefHeight="88.0" prefWidth="1155.0" style="-fx-background-color: #202563 #202563;" translateX="212.0" visible="false">
+            <children>
+                <Label layoutX="35.0" layoutY="17.0" style="-fx-background-color: transperant;" text="Name:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tName" layoutX="75.0" layoutY="13.0" prefHeight="26.0" prefWidth="127.0" style="-fx-border-color: #101152;" />
+                <Label layoutX="21.0" layoutY="50.0" style="-fx-background-color: transperant;" text="Type:" textFill="WHITE" translateX="700.0" translateY="-33.0">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tType" layoutX="57.0" layoutY="46.0" prefHeight="26.0" prefWidth="127.0" style="-fx-border-color: #101152;" translateX="700.0" translateY="-33.0" />
+                <Label layoutX="250.0" layoutY="17.0" style="-fx-background-color: transperant;" text="Quantity:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tQuantity" layoutX="303.0" layoutY="13.0" prefHeight="26.0" prefWidth="141.0" style="-fx-border-color: #101152;" />
+                <Label layoutX="493.0" layoutY="17.0" style="-fx-background-color: transperant;" text="Amount:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tAmount" layoutX="545.0" layoutY="13.0" prefHeight="26.0" prefWidth="141.0" style="-fx-border-color: #101152;" />
+                <Label layoutX="768.0" layoutY="17.0" style="-fx-background-color: transperant;" text="Date:" textFill="WHITE" translateX="150.0">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+            <DatePicker fx:id="tDate" layoutX="954.0" layoutY="13.0" prefHeight="26.0" prefWidth="150.0" />
+            <Hyperlink layoutX="1067.0" layoutY="51.0" onAction="#Clear" text="Clear" textFill="WHITE" />
+            <Hyperlink layoutX="1004.0" layoutY="51.0" onAction="#getRow" text="Get Row" textFill="WHITE" />
+            <Label layoutX="12.0" layoutY="53.0" style="-fx-background-color: transperant;" text="Mgr_SSN : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="tESSN" layoutX="75.0" layoutY="50.0" prefWidth="127.0" />
+            <Label layoutX="228.0" layoutY="52.0" style="-fx-background-color: transperant;" text="WareHouse : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="tStore" layoutX="304.0" layoutY="50.0" prefWidth="141.0" />
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="2.0" layoutY="3.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="203.0" translateY="-1.0">
+         <children>
+            <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="515.0" prefWidth="214.0" style="-fx-background-color: #202563#202563;">
+               <children>
+                  <AnchorPane prefHeight="149.0" prefWidth="201.0">
+                     <children>
+                        <AnchorPane layoutX="18.0" layoutY="-8.0" prefHeight="149.0" prefWidth="200.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILTER" layoutX="43.0" layoutY="134.0" size="2em" wrappingWidth="19.31904411315918" />
+                              <JFXButton layoutX="66.0" layoutY="113.0" onAction="#Pmove" stylesheets="@hoverB.css" text="Filter" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="13.0" layoutY="141.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" layoutX="41.0" layoutY="81.0" size="2em" wrappingWidth="19.31904411315918" />
+                              <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="41.0" layoutY="33.0" size="2em" wrappingWidth="19.31904411315918" />
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="43.0" layoutY="127.0" size="1.5em" />
+                              <FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="42.0" layoutY="176.0" size="1.5em" />
+                              <JFXButton layoutX="61.0" layoutY="156.0" onAction="#Delete" stylesheets="@hoverB.css" text="Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton layoutX="62.0" layoutY="107.0" onAction="#Add" stylesheets="@hoverB.css" text="Add" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton layoutX="62.0" layoutY="59.0" onAction="#Update" stylesheets="@hoverB.css" text="Update" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton layoutX="63.0" layoutY="11.0" onAction="#Search" stylesheets="@hoverB.css" text="Search" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+    </children>
+</Pane>

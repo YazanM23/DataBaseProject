@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pur" pageWidth="750" pageHeight="842" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="202241a6-6749-45fb-a3a9-08a870273c68">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT sum(amount) AS Total,
+	"AMOUNT",
+	"DATE_OF_BUY",
+	"PTYPE"
+FROM "PURCHASES"
+GROUP BY "PURCHASES"."AMOUNT",
+	"PURCHASES"."DATE_OF_BUY",
+	"PURCHASES"."PTYPE"]]>
+	</queryString>
+	<field name="TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="TOTAL"/>
+	</field>
+	<field name="AMOUNT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="AMOUNT"/>
+		<property name="com.jaspersoft.studio.field.label" value="AMOUNT"/>
+	</field>
+	<field name="DATE_OF_BUY" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="DATE_OF_BUY"/>
+		<property name="com.jaspersoft.studio.field.label" value="DATE_OF_BUY"/>
+	</field>
+	<field name="PTYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PTYPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="PTYPE"/>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{TOTAL}]]></groupExpression>
+		<groupHeader>
+			<band height="34">
+				<textField>
+					<reportElement mode="Transparent" x="322" y="2" width="170" height="22" forecolor="#101152" backcolor="#E6E6E6" uuid="1951dc6f-c841-4abc-9162-9d9ac22283e2"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TOTAL}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Transparent" x="555" y="2" width="163" height="20" forecolor="#101152" uuid="62ab3044-f773-4675-868f-69eb39bb7922"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{DATE_OF_BUY}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Transparent" x="21" y="0" width="145" height="32" forecolor="#101152" uuid="d3e9d265-8563-4360-8abd-bb4bfb98de55"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PTYPE}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[$F{DATE_OF_BUY}]]></groupExpression>
+		<groupHeader>
+			<band height="12"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<groupExpression><![CDATA[$F{PTYPE}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="121">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="750" height="92" backcolor="#101152" uuid="862171e5-2331-4a8a-b5ab-3b610e4e1887"/>
+				<staticText>
+					<reportElement x="518" y="10" width="205" height="60" forecolor="#FFFFFF" uuid="9e428fb2-1ae4-4fbe-9873-ddd895af3b61"/>
+					<textElement textAlignment="Left">
+						<font size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[P. O. Box 380 -Palestine - Nablus
+Tel: +970-9-2335941
+Fax: +970-9-2335940
+Website: www.palsolar.net
+E-mail:info@palsolar.net]]></text>
+				</staticText>
+				<image>
+					<reportElement x="7" y="7" width="100" height="75" uuid="c1a1212d-d190-433e-98fb-5c7c866db289"/>
+					<imageExpression><![CDATA["/Users/yazanmansour/Desktop/New Folder With Items 2/jasper/src/main/resources/com/example/secondloginpage/1040346_351053815021266_1574038359_o-removebg-preview.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="19"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23">
+			<line>
+				<reportElement x="-20" y="21" width="760" height="1" forecolor="#666666" uuid="b5794acc-6d7d-40d3-b4ca-ff8615e3b087"/>
+			</line>
+			<staticText>
+				<reportElement x="-10" y="-3" width="104" height="20" forecolor="#101152" uuid="a951cb9c-1363-4637-9d6a-144ab28daf05"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PTYPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="270" y="-6" width="140" height="24" forecolor="#101152" backcolor="#E6E6E6" uuid="d1ecbf27-8622-4bcb-af49-af3e1cdbb55c"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="-3" width="123" height="20" forecolor="#101152" uuid="ada4a3db-0f8b-499b-b086-cb875882c905"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE_OF_BUY]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band/>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="f0c004d8-3efc-4ad0-81ec-8908b3e7774c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="aa65852e-2414-4e28-a754-e3807b73beff"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="255b3aa9-48ba-4ea5-a017-0b22bed828fe"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

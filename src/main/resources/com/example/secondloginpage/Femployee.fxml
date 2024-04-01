@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.secondloginpage.EmployeeController">
+    <children>
+        <TableView fx:id="tableEmp" layoutY="86.0" prefHeight="513.0" prefWidth="1154.0" styleClass="column-header-background" stylesheets="@tablecss.css" translateX="211.0" translateY="-90.0">
+            <columns>
+                <TableColumn fx:id="SSNcol" prefWidth="119.0" sortable="false" text="SSN" />
+                <TableColumn fx:id="Fnamecol" prefWidth="100.0" sortable="false" text="FName" />
+                <TableColumn fx:id="Lnamecol" prefWidth="87.25456237792969" sortable="false" text="LName" />
+                <TableColumn fx:id="phonecol" prefWidth="125.73541259765625" sortable="false" text="PNumber" />
+                <TableColumn fx:id="typecol" minWidth="7.0" prefWidth="112.0" sortable="false" text="Type" />
+                <TableColumn fx:id="sdatecol" prefWidth="158.5" sortable="false" text="SDate" />
+                <TableColumn fx:id="edatecol" minWidth="0.0" prefWidth="137.44073486328125" sortable="false" text="EDate" />
+                <TableColumn fx:id="agecol" prefWidth="47.737060546875" sortable="false" text="Age" />
+            <TableColumn fx:id="CityColumn" minWidth="0.0" prefWidth="92.5" sortable="false" text="City" />
+            <TableColumn fx:id="blodcol" minWidth="0.0" prefWidth="43.0" sortable="false" text="Blod" />
+            <TableColumn fx:id="salarycol" prefWidth="58.0" sortable="false" text="Salary" />
+            <TableColumn fx:id="gendercol" minWidth="0.0" prefWidth="70.0" sortable="false" text="Gender" />
+            </columns>
+        </TableView>
+        <AnchorPane fx:id="EmpSilde" layoutX="-12.0" layoutY="-1.0" prefHeight="88.0" prefWidth="1167.0" style="-fx-background-color: #202563 #202563;" translateX="211.0" visible="false">
+            <children>
+                <Label layoutX="18.0" layoutY="17.0" style="-fx-background-color: transperant;" text="SSN:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tSSN" layoutX="51.0" layoutY="13.0" prefHeight="28.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+                <Label layoutX="159.0" layoutY="17.0" style="-fx-background-color: transperant;" text="FName:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tFName" layoutX="205.0" layoutY="13.0" prefHeight="26.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+                <Label layoutX="506.0" layoutY="18.0" style="-fx-background-color: transperant;" text="Type:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="324.0" layoutY="17.0" style="-fx-background-color: transperant;" text="LName:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tLName" layoutX="372.0" layoutY="13.0" prefHeight="26.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+                <Label layoutX="1006.0" layoutY="18.0" style="-fx-background-color: transperant;" text="City:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tCity" layoutX="1040.0" layoutY="14.0" prefHeight="26.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+            <Label layoutX="671.0" layoutY="18.0" style="-fx-background-color: transperant;" text="SDate:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="834.0" layoutY="18.0" style="-fx-background-color: transperant;" text="Blod:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tBlod" layoutX="868.0" layoutY="14.0" prefHeight="26.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+            <Label layoutX="671.0" layoutY="50.0" style="-fx-background-color: transperant;" text="EDate:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="47.0" style="-fx-background-color: transperant;" text="Age:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tAge" layoutX="51.0" layoutY="43.0" prefHeight="28.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+            <Label layoutX="167.0" layoutY="49.0" style="-fx-background-color: transperant;" text="Salary:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tSalary" layoutX="206.0" layoutY="45.0" prefHeight="26.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+            <Label layoutX="325.0" layoutY="50.0" style="-fx-background-color: transperant;" text="Gender:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tGender" layoutX="373.0" layoutY="46.0" prefHeight="26.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+            <Label layoutX="485.0" layoutY="52.0" style="-fx-background-color: transperant;" text="PNumber:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tPNumber" layoutX="542.0" layoutY="48.0" prefHeight="26.0" prefWidth="105.0" style="-fx-border-color: #101152;" />
+            <DatePicker fx:id="tSDate" layoutX="711.0" layoutY="15.0" prefHeight="26.0" prefWidth="104.0" style="-fx-border-color: #101152;" />
+            <DatePicker fx:id="tEDate" layoutX="711.0" layoutY="46.0" prefHeight="26.0" prefWidth="104.0" style="-fx-border-color: #101152;" />
+            <ChoiceBox fx:id="choicebox" layoutX="543.0" layoutY="14.0" prefHeight="26.0" prefWidth="104.0" />
+            <Hyperlink layoutX="1104.0" layoutY="57.0" onAction="#Clear" text="Clear" textFill="WHITE" />
+            <Hyperlink fx:id="getrow" layoutX="1045.0" layoutY="57.0" onAction="#getRow" text="Get Row" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="2.0" layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="214.0">
+         <children>
+            <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="515.0" prefWidth="214.0" style="-fx-background-color: #202563#202563;">
+               <children>
+                  <AnchorPane prefHeight="149.0" prefWidth="201.0">
+                     <children>
+                        <AnchorPane prefHeight="149.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton layoutX="60.0" layoutY="110.0" onAction="#Emove" stylesheets="@hoverB.css" text="Filter" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILTER" layoutX="43.0" layoutY="134.0" size="2em" wrappingWidth="19.31904411315918" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton layoutX="62.0" layoutY="10.0" onAction="#Search" stylesheets="@hoverB.css" text="Search" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="62.0" layoutY="58.0" onAction="#Update" stylesheets="@hoverB.css" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" layoutX="41.0" layoutY="81.0" size="2em" wrappingWidth="19.31904411315918" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="41.0" layoutY="33.0" size="2em" wrappingWidth="19.31904411315918" />
+                        <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="106.0" onAction="#Add" stylesheets="@hoverB.css" text="Add" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="43.0" layoutY="127.0" size="1.5em" />
+                        <JFXButton layoutX="54.0" layoutY="155.0" onAction="#Delete" stylesheets="@hoverB.css" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="42.0" layoutY="176.0" size="1.5em" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+    </children>
+</Pane>

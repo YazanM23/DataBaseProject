@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="511.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.secondloginpage.ProfileController">
+   <children>
+      <AnchorPane layoutX="214.0" layoutY="-5.0" prefHeight="529.0" prefWidth="1155.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="431.0" layoutY="169.0" text="City : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tCity" layoutX="479.0" layoutY="165.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="726.0" layoutY="164.0" text="Phone Number : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tPNumber" layoutX="838.0" layoutY="165.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="729.0" layoutY="287.0" text="Start Contract : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="tSDate" layoutX="837.0" layoutY="282.0" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="735.0" layoutY="230.0" text="End Contract : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="tEDate" layoutX="837.0" layoutY="223.0" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="390.0" layoutY="287.0" text="Blood Type : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tBlood" layoutX="481.0" layoutY="282.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="413.0" layoutY="228.0" text="gender : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tGender" layoutX="480.0" layoutY="223.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="417.0" layoutY="347.0" text="Salary : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tSalary" layoutX="481.0" layoutY="343.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="429.0" layoutY="60.0" prefHeight="37.0" prefWidth="283.0" text="Complete Your Profile" translateY="-15.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="399.0" layoutY="87.0" size="30" translateY="-15.0" />
+            <Label layoutX="88.0" layoutY="170.0" text="User : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tUser" layoutX="136.0" layoutY="165.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="90.0" layoutY="228.0" text="SSN : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tSSN" layoutX="136.0" layoutY="223.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="51.0" layoutY="287.0" text="First Name : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tFname" layoutX="136.0" layoutY="282.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="51.0" layoutY="347.0" text="Last Name : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tLname" layoutX="136.0" layoutY="343.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label fx:id="oldLabel" layoutX="367.0" layoutY="405.0" text="Old Password : " textFill="#101152" translateY="-15.0" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="newLabel" layoutX="729.0" layoutY="405.0" text="New Password : " textFill="#101152" translateY="-15.0" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="tType" layoutX="837.0" layoutY="343.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <Label layoutX="757.0" layoutY="347.0" text="Jop Type : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="405.0" text="Age : " textFill="#101152" translateY="-15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tAge" layoutX="136.0" layoutY="400.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" />
+            <JFXButton layoutX="134.0" layoutY="90.0" onAction="#Update" text="Update" textFill="#101152">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="#101152" glyphName="REFRESH" layoutX="113.0" layoutY="113.0" selectionFill="#101152" size="2em" wrappingWidth="19.31904411315918" />
+            <JFXButton layoutX="130.0" layoutY="447.0" onAction="#password" text="Change Password" textFill="#101152">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="#101152" glyphName="KEY" layoutX="109.0" layoutY="470.0" size="2em" wrappingWidth="19.31904411315918" />
+            <JFXButton layoutX="938.0" layoutY="447.0" onAction="#Clear" text="Clear" textFill="#101152">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="#101152" glyphName="TRASH" layoutX="922.0" layoutY="470.0" size="2em" />
+            <PasswordField fx:id="tOld" layoutX="481.0" layoutY="400.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" visible="false" />
+            <PasswordField fx:id="tNew" layoutX="837.0" layoutY="400.0" style="-fx-background-color: transperant; -fx-border-color: #101152;" translateY="-15.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="12.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="214.0" translateX="-10.0" translateY="-10.0">
+         <children>
+            <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="525.0" prefWidth="214.0" style="-fx-background-color: #202563#202563;">
+               <children>
+                  <AnchorPane prefHeight="149.0" prefWidth="201.0">
+                     <children>
+                        <AnchorPane prefHeight="149.0" prefWidth="200.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="amountReport" pageWidth="750" pageHeight="842" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="07194673-947f-4c4c-bab8-52d98b909900">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "EMPLOYEE"."LNAME",
+	sum(amount) AS Total,
+	"EMPLOYEE"."FNAME",
+	"EXPENSES"."AMOUNT",
+	"EXPENSES"."TYPE"
+FROM "EXPENSES"
+	INNER JOIN "EMPLOYEE" ON 
+	 "EXPENSES"."ESSN" = "EMPLOYEE"."SSN" 
+GROUP BY "EMPLOYEE"."FNAME", "EMPLOYEE"."LNAME", "EXPENSES"."TYPE", "EXPENSES"."AMOUNT"]]>
+	</queryString>
+	<field name="TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="TOTAL"/>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="NAME"/>
+	</field>
+	<field name="TYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TYPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="TYPE"/>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{NAME}]]></groupExpression>
+		<groupHeader>
+			<band height="34">
+				<line>
+					<reportElement x="3" y="33" width="700" height="1" forecolor="#666666" uuid="4f9e2e72-079c-4afa-9b8d-e9ca5c2a6024"/>
+				</line>
+				<staticText>
+					<reportElement mode="Transparent" x="265" y="9" width="125" height="20" forecolor="#101152" backcolor="#202563" uuid="1c7eb54b-c5df-4350-9751-a10ff09e371f"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Expeneses Type]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="535" y="9" width="111" height="20" forecolor="#101152" backcolor="#202563" uuid="2c2b0394-96eb-4044-acd7-1d1083b8f9a1">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="50d5ff77-88d8-4a6d-8afb-0380174f1190"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOTAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="28" y="9" width="110" height="20" forecolor="#101152" backcolor="#202563" uuid="192d9ac9-8f1f-4621-9651-e340217f9698"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[ Project Name]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[$F{TYPE}]]></groupExpression>
+		<groupHeader>
+			<band height="39">
+				<textField>
+					<reportElement x="230" y="2" width="188" height="32" forecolor="#000000" uuid="8e74cda9-1761-4dda-a215-c005d3ea650b"/>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TYPE}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="487" y="1" width="200" height="20" uuid="12d04bce-95c6-441a-b790-03718c32c244">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="50d5ff77-88d8-4a6d-8afb-0380174f1190"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TOTAL}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Transparent" x="-14" y="3" width="189" height="32" forecolor="#000000" backcolor="#E6E6E6" uuid="6e52bfb2-2301-4229-9821-081bf1f65fcd"/>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="80">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="750" height="100" backcolor="#101152" uuid="617d2c5e-af97-43c7-a188-03172d023d5a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="517" y="4" width="228" height="89" forecolor="#FFFFFF" uuid="a7f29332-42ad-436a-84e6-dbd6fdf12b24"/>
+					<textElement textAlignment="Left">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[P. O. Box 380 -Palestine -Nablus
+Tel: +970-9-2335941
+Fax: +970-9-2335940
+Website: www.palsolar.net
+E-mail:info@palsolar.net]]></text>
+				</staticText>
+				<image>
+					<reportElement x="0" y="0" width="110" height="100" uuid="a39262f4-00e0-4e3f-9e64-1f1b885b6305"/>
+					<imageExpression><![CDATA["/Users/yazanmansour/Desktop/New Folder With Items 2/jasper/src/main/resources/com/example/secondloginpage/1040346_351053815021266_1574038359_o-removebg-preview.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21"/>
+	</columnHeader>
+	<detail>
+		<band height="2"/>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="654" height="13" backcolor="#E6E6E6" uuid="792a506e-057f-4fa3-87cf-da0abb133c5b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="654" y="4" width="71" height="13" backcolor="#E6E6E6" uuid="569c7552-9107-459d-9240-08dda846d67b"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="e35df8d3-9459-4d6f-a1a7-2c98f9e0ada0"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

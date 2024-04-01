@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.secondloginpage.controller3">
+   <children>
+      <BorderPane layoutX="382.0" layoutY="23.0" prefHeight="550.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="457.0" prefWidth="203.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <AnchorPane prefHeight="512.0" prefWidth="1365.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane fx:id="stackP" layoutX="-203.0" layoutY="1.0" prefHeight="511.0" prefWidth="1365.0" translateY="-2.0">
+                     <children>
+                        <AnchorPane prefHeight="511.0" prefWidth="1201.0" />
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+                           <children>
+                              <ImageView fx:id="img" fitHeight="300.0" fitWidth="550.0" layoutX="125.0" layoutY="115.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@ICONS/Blue%20beach-1.JPG" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="20.2" offsetY="5.0" radius="4.55" spread="0.39" width="0.0">
+                                       <color>
+                                          <Color red="0.46000000834465027" green="0.4553999900817871" blue="0.4553999900817871" opacity="0.49544063210487366" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <ImageView fx:id="nextImg" fitHeight="300.0" fitWidth="550.0" layoutX="-425.0" layoutY="115.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@ICONS/C4%20(%20Buraij%20&amp;%20sheikh%20ajleen)%20-7.JPG" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="prevImg" fitHeight="300.0" fitWidth="550.0" layoutX="675.0" layoutY="115.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@ICONS/ADS%20solar%20tracking%20system-2.jpeg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="temp" fitHeight="300.0" fitWidth="550.0" layoutX="1225.0" layoutY="115.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@ICONS/solar-panel-sun-shutterstock_177900254-1920x1080-toweb.jpeg" />
+                                 </image>
+                              </ImageView>
+                              <Pane layoutX="44.0" layoutY="234.0" onMouseClicked="#leftArrow" prefHeight="58.4" prefWidth="58.4" styleClass="btn" stylesheets="@CSS/style.css">
+                                 <children>
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                       <image>
+                                          <Image url="@ICONS/right-arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Pane layoutX="720.0" layoutY="245.0" styleClass="btn" stylesheets="@CSS/style.css" AnchorPane.rightAnchor="40.0">
+                                 <children>
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="8.0" layoutY="10.0" onMouseClicked="#rightArrow" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ICONS/right-arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Text layoutX="278.0" layoutY="463.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Get Started !">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="33.0" />
+                                 </font>
+                              </Text>
+                              <JFXHamburger layoutX="14.0" layoutY="14.0" onMouseClicked="#selectPhotos" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXHamburger>
+                              <GridPane fx:id="grid" layoutX="-1.0" layoutY="541.0" prefHeight="226.0" prefWidth="806.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Button layoutX="99.0" layoutY="466.0" mnemonicParsing="false" onAction="#addCard" text="Add" visible="false" />
+                              <Label fx:id="usertxt" layoutX="283.0" layoutY="471.0" prefHeight="17.0" prefWidth="162.0" text="Welcome Yazan" textFill="GREY" />
+                           </children>
+                        </AnchorPane>
+                     </children></StackPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="98.0" prefWidth="1201.0" style="-fx-background-color: #101152;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="98.0" fitWidth="101.0" layoutX="4.0" layoutY="3.0" onMouseClicked="#mainP" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@1040346_351053815021266_1574038359_o-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imageV" fitHeight="150.0" fitWidth="440.0" layoutX="496.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@PalCo.gif" />
+                     </image>
+                  </ImageView>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="1292.0" layoutY="52.0" onMouseClicked="#scaleChange" size="25" wrappingWidth="9.768074369358317" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="BOOK" layoutX="1327.0" layoutY="52.0" onMouseClicked="#report" size="25" wrappingWidth="9.768074369358317" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+      <AnchorPane fx:id="slideq" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="214.0" translateX="-230.0">
+         <children>
+            <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="515.0" prefWidth="214.0" style="-fx-background-color: #202563#202563;">
+               <children>
+                  <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="214.0" styleClass="button" stylesheets="@hoverB.css">
+                     <children>
+                        <JFXButton layoutX="37.0" layoutY="37.0" onAction="#mainPa" stylesheets="@click.css" text="Main Page" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" layoutX="17.0" layoutY="59.0" size="2em" wrappingWidth="19.31904411315918" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="214.0" styleClass="button" stylesheets="@hoverB.css">
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="19.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-iOS-Group%20of%20Projects.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="39.0" layoutY="10.0" onAction="#Proj" stylesheets="@click.css" text="Projects" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="10.0" prefWidth="233.0" styleClass="button" stylesheets="@hoverB.css">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="11.0" onAction="#empl" stylesheets="@click.css" text="Employees" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="18.0" layoutY="32.0" size="1.5em" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="10.0" prefWidth="233.0" styleClass="button" stylesheets="@hoverB.css">
+                     <children>
+                        <JFXButton layoutX="36.0" layoutY="12.0" onAction="#exp" stylesheets="@click.css" text="Expenses" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="18.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-iOS%20Glyph-General%20Ledger.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="100.0" prefHeight="10.0" prefWidth="233.0" styleClass="button" stylesheets="@hoverB.css">
+                     <children>
+                        <JFXButton layoutX="35.0" layoutY="12.0" onAction="#pur" stylesheets="@click.css" text="Purchases" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="17.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-Windows%20Metro-Buy.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="142.0" prefHeight="10.0" prefWidth="233.0" styleClass="button" stylesheets="@hoverB.css">
+                     <children>
+                        <JFXButton layoutX="36.0" layoutY="11.0" onAction="#Ware" stylesheets="@click.css" text="WareHouse" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" layoutX="16.0" layoutY="33.0" size="2em" wrappingWidth="19.31904411315918" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="233.0" styleClass="button" stylesheets="@hoverB.css">
+                     <children>
+                        <JFXButton layoutX="37.0" layoutY="13.0" onAction="#out" stylesheets="@click.css" text="SignOut" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="19.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-iOS%20Filled-Sign%20Out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="out" prefHeight="150.0" prefWidth="214.0" style="-fx-background-color: #101152;" translateX="570.0" translateY="-160.0" visible="false">
+                     <children>
+                        <Text fill="WHITE" layoutX="24.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure to Sign out?">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Hyperlink layoutX="30.0" layoutY="72.0" onAction="#back" text="Cancel" textFill="WHITE" />
+                        <Hyperlink layoutX="143.0" layoutY="72.0" onAction="#back1" text="Yes" textFill="WHITE" />
+                        <Label layoutX="92.0" layoutY="93.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="Ftables" prefHeight="224.0" prefWidth="214.0" visible="false">
+                     <children>
+                        <JFXButton layoutX="43.0" layoutY="51.0" stylesheets="@click.css" text="Search" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="25.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-iOS%20Filled-Sign%20Out.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="43.0" layoutY="80.0" stylesheets="@click.css" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="25.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-iOS%20Filled-Sign%20Out.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="43.0" layoutY="112.0" stylesheets="@click.css" text="Add" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="25.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-iOS%20Filled-Sign%20Out.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="44.0" layoutY="144.0" stylesheets="@click.css" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="26.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-iOS%20Filled-Sign%20Out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="profile" layoutX="220.0" layoutY="10.0" prefHeight="511.0" prefWidth="874.0" style="-fx-background-color: #101152;" translateY="40.0" visible="false">
+         <children>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="879.0" />
+            <Label layoutX="405.0" layoutY="41.0" text="Profile" textFill="#101152">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
