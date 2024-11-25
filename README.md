@@ -16,7 +16,7 @@
   - Manage employee roles and assignments to projects.
 
 - **Database Integration**:
-  - Uses MySQL for data storage and management.
+  - Uses Oracle Database for data storage and management.
   - Implements CRUD operations for projects and employee data.
 
 - **User-Friendly Interface**:
@@ -32,7 +32,7 @@
 - **Java** (JDK 8 or higher)
 - **JavaFX SDK**
 - **Scene Builder** (for GUI editing)
-- **MySQL**
+- **Oracle Database**
 
 ---
 
@@ -45,14 +45,14 @@
    ```
 
 2. **Set up the database**:
-   - Create a database named `palsolar`.
-   - Import the `palsolar.sql` file into your MySQL database.
+   - Create an Oracle database schema for `palsolar`.
+   - Run the SQL scripts provided in `palsolar.sql` to set up tables and initial data.
 
 3. **Configure database connection**:
-   Update the `db_config.java` file with your database credentials:
+   Update the `db_config.java` file with your Oracle Database credentials:
    ```java
    public class DBConfig {
-       public static final String URL = "jdbc:mysql://localhost:3306/palsolar";
+       public static final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
        public static final String USER = "your-username";
        public static final String PASSWORD = "your-password";
    }
